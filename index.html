@@ -10,13 +10,13 @@
     <header>
         <nav>
             <a>
-                <img src="img/logo-index.svg" width="" 371 height="155" alt="Логотип барбершопа «Бородинский»">
+                <img src="img/logo-index.svg" width="371" height="155" alt="Логотип барбершопа «Бородинский»">
             </a>
             <ul>
                 <li><a href="#">Информация</a></li>
                 <li><a href="#">Новости</a></li>
                 <li><a href="#">Прайс-лист</a></li>
-                <li><a href="#">Магазин</a></li>
+                <li><a href="catalog.html">Магазин</a></li>
                 <li><a href="#">Контакты</a></li>
             </ul>
             <a href="#">Вход</a>
@@ -64,7 +64,7 @@
             <h2>Фотогалерея</h2>
             <figure>
                 <a href="#">
-                    <img src="img/gallery.jpg" width="286" height="164" alt="Интерьер барбершопа «Бородинский»">
+                    <img src="img/studio.jpg" width="286" height="164" alt="Интерьер барбершопа «Бородинский»">
                 </a>
             </figure>
             <button type="button" disabled>Назад</button>
@@ -86,7 +86,29 @@
         <section>
             <h2>Записаться</h2>
             <p>Укажите желаемую дату и время и мы свяжемся с вами для подтверждения брони</p>
-            <!--Здесь будет форма записи-->
+            <form action="https://echo.htmlacademy.ru" action="post">
+                <p>
+                    <label for="appointmant-date">Дата
+                        <input id="appointmant-date" type="text" name="date" placeholder="01.01.2020">
+                    </label>
+                </p>
+                <p>
+                    <label for="appointmant-time">Время
+                        <input id="appointmant-time" type="text" name="time" placeholder="10:00">
+                    </label>
+                </p>
+                <p>
+                    <label for="appointmant-name">Ваше имя
+                        <input id="appointmant-name" type="text" name="name" placeholder="Борода">
+                    </label>
+                </p>
+                <p>
+                    <label for="appointmant-phone">Телефон
+                        <input id="appointmant-phone" type="tel" name="phone" placeholder="+ 7 999 000-00-00">
+                    </label>
+                </p>
+                <button type="submit">Отправить</button>
+            </form>
         </section>
     </main>
     <footer>
@@ -114,7 +136,24 @@
     <section>
         <h2>Личный кабинет</h2>
         <p>Введите логин и пароль</p>
-        <!--Здесь будет формал логина-->
+        <form action="https://echo.htmlacademy.ru" action="post">
+            <p>
+                <label for="login-login">Логин</label>
+                <input id="login-login" type="email" name="login" placeholder="email@example.com">
+            </p>
+            <p>
+                <label for="login-password">Пароль</label>
+                <input id="login-password" type="password" name="password" placeholder="********">
+            </p>
+            <p>
+                <label>
+                    <input type="checkbox" name="remember">
+                    Запомните меня
+                </label>
+                <a href="#">Я забыл пароль!</a>
+            </p>
+            <button type="submit">Войти</button>
+        </form>
         <button type="button">Закрыть</button>
     </section>
 
@@ -123,7 +162,7 @@
         <!--Здесь будет карта-->
         <button type="button">Закрыть</button>
     </section>
-    
+
 </body>
 
 </html>
