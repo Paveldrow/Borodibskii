@@ -5,35 +5,34 @@
     <meta charset="UTF-8">
     <title>Барбершоп «Бородинский»</title>
     <link
-        href="https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@400;700&family=Roboto+Condensed&display=swap" rel="stylesheet">
+        href="https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@400;700&family=Roboto+Condensed&display=swap"
+        rel="stylesheet">
     <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
 </head>
 
 <body class="page-body">
     <header class="main-header">
-        <nav class="main-navigation">
+        <nav class="main-navigation container">
             <a class="main-header-logo">
-                <img src="img/logo-index.svg" width="368" height="153" alt="Логотип барбершопа «Бородинский»">
+                <img src="img/logo-index.svg" width="371" height="155" alt="Логотип барбершопа «Бородинский»">
             </a>
             <div class="main-navigation-wrapper">
-                <div class="container">
-                    <ul class="site-navigation">
-                        <li><a href="#">Информация</a></li>
-                        <li><a href="#">Новости</a></li>
-                        <li><a href="#">Прайс-лист</a></li>
-                        <li><a href="catalog.html">Магазин</a></li>
-                        <li><a href="#">Контакты</a></li>
-                    </ul>
-                    <div class="user-navigation">
-                        <a class="login-link" href="#">Вход</a>
-                    </div>
+                <ul class="site-navigation">
+                    <li><a href="#">Информация</a></li>
+                    <li><a href="#">Новости</a></li>
+                    <li><a href="price.html">Прайс-лист</a></li>
+                    <li><a href="catalog.html">Магазин</a></li>
+                    <li><a href="#">Контакты</a></li>
+                </ul>
+                <div class="user-navigation">
+                    <a class="login-link" href="#">Вход</a>
                 </div>
             </div>
         </nav>
     </header>
-    <main>
-        <h1>Барбершоп «Бородинский»</h1>
+    <main class="container">
+        <h1 class="visually-hidden">Барбершоп «Бородинский»</h1>
         <section class="features">
             <h2 class="visually-hidden">Преимущества</h2>
             <ul class="features-list">
@@ -44,13 +43,12 @@
                 </li>
                 <li class="features-item">
                     <h3>Круто</h3>
-                    <p>Забудьте, как вы стриглись раньше. Мы сделаем из вас звезду футбола или кино! Во всяком случае
+                    <p>Забудьте, как вы стриглись раньше. Мы сделаем из вас звезду футбола или кино! Во&nbsp;всяком случае
                         внешне.
                     </p>
                 </li>
                 <li class="features-item">
-                    <h3>Дорго</h3>
-                    <p>Наши мастера — профессионалы своего дела и не могут стоить дешево. К тому же, разве цена не дает
+                    <h3>Дорго</h3> <p>Наши мастера — профессионалы своего дела и не могут стоить дешево. К тому же, разве цена не дает
                         определенный статус?</p>
                 </li>
             </ul>
@@ -76,11 +74,10 @@
                 <div class="gallery-container">
                     <figure class="gallery-content">
                         <a href="#">
-                            <img src="img/studio.jpg" width="286" height="164" alt="Интерьер барбершопа «Бородинский»">
+<img src="img/studio.jpg" width="286" height="164" alt="Интерьер барбершопа «Бородинский»">
                         </a>
                     </figure>
-                    <button class="button gallery-button gallery-button-back" type="button" disabled>Назад</button>
-                    <button class="button gallery-button gallery-button-next" type="button">Вперед</button>
+                    <button class="button gallery-button gallery-button-back" type="button" disabled>Назад</button><button class="button gallery-button gallery-button-next" type="button">Вперед</button>
                 </div>
             </section>
         </div>
@@ -100,7 +97,7 @@
             </section>
             <section class="appointment">
                 <h2>Записаться</h2>
-                <p>Укажите желаемую дату и время и мы свяжемся с вами для подтверждения брони</p>
+                <p class="appointmant-info">Укажите желаемую дату и время и мы свяжемся с вами для подтверждения брони</p>
                 <form class="appointment-form" action="https://echo.htmlacademy.ru" method="post">
                     <p class="appointment-item">
                         <label for="appointmant-date">Дата
@@ -128,8 +125,9 @@
         </div>
     </main>
     <footer class="page-footer main-footer">
+        <div class="container">
         <section class="footer-contacts">
-            <h2>Как нас найти</h2>
+            <h2 class="visually-hidden">Как нас найти</h2>
             <p>Барбершоп «Бородинский»<br>
                 Адрес: г. Санкт-петербург, ул. б. Конюшенная, д. 19/8<br>
                 <a href="#">Как нас найти?</a><br>
@@ -147,11 +145,12 @@
             Разработано:
             <a class="button" href="#">Html Academy</a>
         </p>
+    </div>
     </footer>
 
     <section class="modal">
         <h2>Личный кабинет</h2>
-        <p>Введите логин и пароль</p>
+        <p class="modal-description">Введите логин и пароль</p>
         <form class="login-form" action="https://echo.htmlacademy.ru" method="post">
             <p>
                 <label for="login-login">Логин</label>
@@ -163,8 +162,8 @@
                 <input class="login-icon-password" id="login-password" type="password" name="password"
                     placeholder="********">
             </p>
-            <p>
-                <label>
+            <p class="login-help">
+                <label class="login-checkbox">
                     <input type="checkbox" name="remember">
                     Запомните меня
                 </label>

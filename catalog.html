@@ -13,16 +13,15 @@
 
 <body class="page-body inner-page">
     <header class="main-header">
-        <nav class="main-navigation">
-            <a href="index.html" class="main-header-logo">
+        <nav class="main-navigation container">
+            <a class="main-header-logo" href="index.html">
                 <img src="img/logo.svg" width="111" height="24" alt="Логотип барбершопа «Бородинский»">
             </a>
             <div class="main-navigation-wrapper">
-                <div class="container">
                     <ul class="site-navigation">
                         <li><a href="#">Информация</a></li>
                         <li><a href="#">Новости</a></li>
-                        <li><a href="#">Прайс-лист</a></li>
+                        <li><a href="price.html">Прайс-лист</a></li>
                         <li><a href="catalog.html">Магазин</a></li>
                         <li><a href="#">Контакты</a></li>
                     </ul>
@@ -30,7 +29,6 @@
                         <a class="login-link" href="#">Вход</a>
                     </div>
                 </div>
-            </div>
         </nav>
     </header>
 
@@ -82,24 +80,24 @@
                     <legend>Группы товаров:</legend>
                     <ul>
                         <li>
-                            <input type="radio" name="product-group" id="filter-shaving" value="shaving">
+                            <input class="filter-input-radio" type="radio" name="product-group" id="filter-shaving" value="shaving">
                             <label for="filter-shaving">Бритвенные принадлежности</label>
                         </li>
                         <li>
-                            <input type="radio" name="product-group" id="filter-care" value="care" checked>
+                            <input class="filter-input-radio" type="radio" name="product-group" id="filter-care" value="care" checked>
                             <label for="filter-care">Средства для ухода</label>
                         </li>
                         <li>
-                            <input type="radio" name="product-group" id="filter-accessories" value="accessories">
+                            <input class="filter-input-radio" type="radio" name="product-group" id="filter-accessories" value="accessories">
                             <label for="filter-accessories">Аксессуары</label>
                         </li>
                     </ul>
                 </fieldset>
-                <button type="submit">Показать</button>
+                <button class="button" type="submit">Показать</button>
             </form>
         </section>
-        <section>
-            <h2>Список средств для ухода</h2>
+        <section class="catalog">
+            <h2 class="visually-hidden">Список средств для ухода</h2>
             <ul class="catalog-list">
                 <li class="catalog-item">
                     <a href="baxter-set.html">
@@ -177,6 +175,7 @@
         </section>
     </main>
     <footer class="page-footer main-footer">
+        <div class="container">
         <section class="footer-contacts">
             <h2>Как нас найти</h2>
             <p>Барбершоп «Бородинский»<br>
@@ -196,6 +195,7 @@
             Разработано:
             <a class="button" href="#">Html Academy</a>
         </p>
+        </footer>
     </footer>
 
     <section class="modal">
