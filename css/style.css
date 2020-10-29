@@ -64,6 +64,9 @@ input[type="radio"].visually-hidden {
     align-content     : start;
 }
 
+.main-header {
+    margin-bottom: 70px;
+}
 
 .inner-page .main-header {
     background-color: var(--basic-black);
@@ -83,9 +86,16 @@ input[type="radio"].visually-hidden {
 }
 
 .main-navigation-wrapper {
+    margin-bottom: 60px;
     width           : 100%;
     background-color: var(--basic-black);
 }
+
+.main-navigation-wrapper .container {
+    display: flex;
+    justify-content: space-between;
+}
+
 
 .main-header-logo {
     order : 2;
@@ -170,9 +180,6 @@ input[type="radio"].visually-hidden {
 
   */
 
-.navigation-current {
-    border-bottom: 4px solid var(--basic-white);
-}
 
 .button {
     display         : inline-block;
@@ -262,6 +269,10 @@ input[type="radio"].visually-hidden {
 
 .breadcrumbs-current {
     color: var(--basic-breadcrumbs-current);
+}
+
+.features {
+    margin-bottom: 80px;
 }
 
 .features-list {
@@ -798,18 +809,9 @@ input[type="radio"].visually-hidden {
     transform: rotate(45deg);
 }
 
-
-
-
-
-
-
-
-/* *************************/
-
-
 .main-footer {
     margin-top         : 60px;
+    padding: 60px 0;
     color              : var(--basic-white);
     background-color   : var(--basic-black);
     background-image   : url(../img/pattern-dark.jpg);
@@ -848,6 +850,9 @@ input[type="radio"].visually-hidden {
 }
 
 .footer-social h2 {
+    display: block;
+    margin-top: 0;
+    margin-bottom: 15px;
     font-size: 14px;
 }
 
@@ -859,14 +864,6 @@ input[type="radio"].visually-hidden {
     margin         : 0 auto;
     padding        : 0;
     list-style     : none;
-}
-
-
-.footer-copyright {
-    max-width   : 150px;
-    margin      : 0;
-    justify-self: end;
-    text-align  : center;
 }
 
 .social-button {
@@ -911,6 +908,24 @@ input[type="radio"].visually-hidden {
 .social-button:focus {
     color           : var(--basic-black);
     background-color: var(--basic-white);
+}
+
+
+.footer-copyright {
+    max-width   : 150px;
+    margin      : 0;
+    justify-self: end;
+    text-align  : center;
+}
+
+.developer {
+    display: block;
+    margin-bottom: 15px;
+}
+
+.footer-copyright  .button {
+    display: block;
+    margin: 0;
 }
 
 .footer-copyright .button:hover,
