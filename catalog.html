@@ -22,7 +22,7 @@
                         <li><a href="#">Информация</a></li>
                         <li><a href="#">Новости</a></li>
                         <li><a href="price.html">Прайс-лист</a></li>
-                        <li><a href="catalog.html">Магазин</a></li>
+                        <li class="navigation-current"><a href="catalog.html">Магазин</a></li>
                         <li><a href="#">Контакты</a></li>
                     </ul>
                     <div class="user-navigation">
@@ -47,30 +47,30 @@
                     <legend>Производители:</legend>
                     <ul>
                         <li class="filter-option filter-checkbox">
-                            <input class="filter-input-checkbox" type="checkbox" name="baxter-of-сalifornia"
+                            <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="baxter-of-сalifornia"
                                 id="filter-baxter-of-california" checked>
                             <label for="filter-baxter-of-california">Baxter of California</label>
                         </li>
                         <li class="filter-option filter-checkbox">
-                            <input class="filter-input-checkbox" type="checkbox" name="mr-natty" id="filter-mr-natty">
+                            <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="mr-natty" id="filter-mr-natty">
                             <label for="filter-mr-natty">Mr Natty</label>
                         </li>
                         <li class="filter-option filter-checkbox">
-                            <input class="filter-input-checkbox" type="checkbox" name="suavecito" id="filter-suavecito"
+                            <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="suavecito" id="filter-suavecito"
                                 checked>
                             <label for="filter-suavecito">Suavecito</label>
                         </li>
                         <li class="filter-option filter-checkbox">
-                            <input class="filter-input-checkbox" type="checkbox" name="malin+goetz"
+                            <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="malin+goetz"
                                 id="filter-malin-goetz">
                             <label for="filter-malin-goetz">Malin+Goetz</label>
                         </li>
                         <li class="filter-option filter-checkbox">
-                            <input class="filter-input-checkbox" type="checkbox" name="murray’s" id="filter-murrays">
+                            <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="murray’s" id="filter-murrays">
                             <label for="filter-murrays">Murrays</label>
                         </li>
                         <li class="filter-option filter-checkbox">
-                            <input class="filter-input-checkbox" type="checkbox" name="american-crew"
+                            <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="american-crew"
                                 id="filter-american-crew" checked>
                             <label for="filter-american-crew">American Crew</label>
                         </li>
@@ -80,15 +80,15 @@
                     <legend>Группы товаров:</legend>
                     <ul>
                         <li class="filter-option filter-radio">
-                            <input class="filter-input-radio" type="radio" name="product-group" id="filter-shaving" value="shaving">
+                            <input class="visually-hidden filter-input-radio filter-input" type="radio" name="product-group" id="filter-shaving" value="shaving">
                             <label for="filter-shaving">Бритвенные принадлежности</label>
                         </li>
                         <li class="filter-option filter-radio">
-                            <input class="filter-input-radio" type="radio" name="product-group" id="filter-care" value="care" checked>
+                            <input class="visually-hidden filter-input-radio filter-input" type="radio" name="product-group" id="filter-care" value="care" checked>
                             <label for="filter-care">Средства для ухода</label>
                         </li>
                         <li class="filter-option filter-radio">
-                            <input class="filter-input-radio" type="radio" name="product-group" id="filter-accessories" value="accessories">
+                            <input class="visually-hidden filter-input-radio filter-input" type="radio" name="product-group" id="filter-accessories" value="accessories">
                             <label for="filter-accessories">Аксессуары</label>
                         </li>
                     </ul>
@@ -177,7 +177,7 @@
     <footer class="page-footer main-footer">
         <div class="container">
         <section class="footer-contacts">
-            <h2>Как нас найти</h2>
+            <h2 class="visually-hidden">Как нас найти</h2>
             <p>Барбершоп «Бородинский»<br>
                 Адрес: г. Санкт-петербург, ул. б. Конюшенная, д. 19/8<br>
                 <a href="#">Как нас найти?</a><br>
@@ -186,16 +186,17 @@
         <section class="footer-social">
             <h2>Давайте дружить!</h2>
             <ul class="social-list">
-                <li class="social-item"><a class="social-button" href="#">Вконтакте</a></li>
-                <li class="social-item"><a class="social-button" href="#">Фейсбук</a></li>
-                <li class="social-item"><a class="social-button" href="#">Инстаграм</a></li>
+                <li class="social-item"><a class="social-button social-vk" href="#"><span class="visually-hidden">Вконтакте</span></a></li>
+                <li class="social-item"><a class="social-button social-fb" href="#"><span class="visually-hidden">Фейсбук</span></a></li>
+                <li class="social-item"><a class="social-button social-instagram" href="#"><span class="visually-hidden">Инстаграм</span></a></li>
             </ul>
         </section>
         <p class="footer-copyright">
             Разработано:
             <a class="button" href="#">Html Academy</a>
         </p>
-        </footer>
+    </div>
+    </footer>
     </footer>
 
     <section class="modal">
