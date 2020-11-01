@@ -86,13 +86,13 @@ input[type="radio"].visually-hidden {
 }
 
 .main-navigation-wrapper {
-    margin-bottom: 60px;
+    margin-bottom   : 60px;
     width           : 100%;
     background-color: var(--basic-black);
 }
 
 .main-navigation-wrapper .container {
-    display: flex;
+    display        : flex;
     justify-content: space-between;
 }
 
@@ -177,9 +177,7 @@ input[type="radio"].visually-hidden {
 .site-navigation-current a:not([href]) {
     background-color: var(--basic-black);
   }
-
   */
-
 
 .button {
     display         : inline-block;
@@ -288,7 +286,6 @@ input[type="radio"].visually-hidden {
     text-align: center;
 }
 
-
 .features-item h3 {
     position     : relative;
     margin       : 0;
@@ -309,7 +306,6 @@ input[type="radio"].visually-hidden {
     background-color: var(--basic-white);
     transform       : rotate(45deg);
 }
-
 
 .features-item p {
     padding: 0 10px;
@@ -451,21 +447,17 @@ input[type="radio"].visually-hidden {
     margin-right: 0;
 }
 
-
 .page-catalog {
     display              : grid;
     grid-template-columns: 180px 1fr;
     align-content        : start;
 }
 
-
 .page-catalog .page-title {
     grid-column: 1 / -1;
     font-size  : 30px;
     line-height: 42px;
 }
-
-
 
 .page-catalog .breadcrumbs {
     grid-column: 1 / -1;
@@ -565,6 +557,136 @@ input[type="radio"].visually-hidden {
     border-radius   : 50%;
 }
 
+.filter-input:disabled+label,
+.filter-input:checked:disabled+label,
+.filter-input:disabled:hover+label,
+.filter-input:disabled:focus+label {
+    color         : var(--basic-black);
+    opacity       : 0.3;
+    pointer-events: none;
+}
+
+.inner-content .big-heading {
+    display      : flex;
+    align-items  : center;
+    margin-top   : 55px;
+    margin-bottom: 65px;
+    font-size    : 48px;
+    line-height  : 48px;
+    text-align   : center;
+}
+
+.big-heading::before,
+.big-heading::after {
+    flex-grow  : 1;
+    flex-shrink: 0;
+    content    : "";
+    height     : 2px;
+    background : var(--basic-black);
+}
+
+.big-heading::before {
+    margin-right: 25px;
+}
+
+.big-heading::after {
+    margin-left: 25px;
+}
+
+.inner-content h2 {
+    margin-top   : 60px;
+    margin-bottom: 30px;
+    font-size    : 48px;
+    line-height  : 48px;
+}
+
+.inner-content h3 {
+    margin-top   : 60px;
+    margin-bottom: 30px;
+    font-size    : 24px;
+    line-height  : 30px;
+}
+
+.inner-content h2+h3 {
+    margin-top: 30px;
+}
+
+.inner-column {
+    display        : flex;
+    flex-wrap      : wrap;
+    justify-content: space-between;
+    margin         : 60px 0;
+}
+
+.inner-column-right,
+.inner-column-left {
+    width: 460px;
+}
+
+.inner-column-left *:first-child,
+.inner-column-right *:first-child {
+    margin-top: 0;
+}
+
+.inner-column-left *:last-child,
+.inner-column-right *:last-child {
+    margin-bottom: 0;
+}
+
+.inner-column h3 {
+    width     : 100%;
+    margin-top: 0;
+}
+
+.custom-list-1 {
+    margin    : 14px 0;
+    padding   : 0;
+    list-style: none;
+}
+
+.custom-list-1 li {
+    position     : relative;
+    padding-left : 20px;
+    margin-bottom: 15px;
+}
+
+.custom-list-1 li::before {
+    position        : absolute;
+    content         : "";
+    width           : 8px;
+    height          : 8px;
+    top             : 8px;
+    left            : 0;
+    background-color: var(--basic-black);
+    transform       : rotate(45deg);
+}
+
+
+.custom-table {
+    width: 100%;
+}
+
+.custom-table td {
+    width: 50%;
+}
+
+.custom-table td:last-child {
+    text-align: center;
+}
+
+.inner-content p {
+    margin: 14px 0;
+}
+
+.inner-content table {
+    border-collapse: collapse;
+}
+
+.inner-content td {
+    padding: 10px 15px;
+    border : 2px solid var(--basic-black);
+}
+
 .catalog {
     margin-left: 60px;
 }
@@ -619,6 +741,7 @@ input[type="radio"].visually-hidden {
 
 .catalog-item-category {
     text-transform: none;
+    display       : block;
 }
 
 .catalog-item-price {
@@ -700,7 +823,10 @@ input[type="radio"].visually-hidden {
     height       : 498px;
     margin       : 0;
     margin-bottom: 20px;
-    box-shadow   : 0px 0px 15px var(--basic-box-shadow);
+}
+
+.product-photo-full:hover {
+    box-shadow: 0px 0px 15px var(--basic-box-shadow);
 }
 
 .product-photo-preview {
@@ -732,14 +858,14 @@ input[type="radio"].visually-hidden {
 }
 
 .product-price .cost {
-    line-height: 20px;
-    text-align : center;
-    width: 112px;
-    padding-top: 13px;
-    padding-right: 36px;
+    line-height   : 20px;
+    text-align    : center;
+    width         : 112px;
+    padding-top   : 13px;
+    padding-right : 36px;
     padding-bottom: 11px;
-    padding-left: 36px;
-    box-sizing: border-box;
+    padding-left  : 36px;
+    box-sizing    : border-box;
 }
 
 .product-info {
@@ -753,10 +879,10 @@ input[type="radio"].visually-hidden {
 }
 
 .product-description {
-    display      : flex;
+    display        : flex;
     justify-content: space-between;
-    padding-right: 10px;
-    margin-bottom: 29px;
+    padding-right  : 10px;
+    margin-bottom  : 29px;
 }
 
 .product-description p {
@@ -787,31 +913,31 @@ input[type="radio"].visually-hidden {
 
 .invent-list {
     list-style: none;
-    margin: 0;
-    padding: 0;
+    margin    : 0;
+    padding   : 0;
 }
 
 .invent-item {
-    position: relative;
-    padding-left: 19px;
+    position     : relative;
+    padding-left : 19px;
     margin-bottom: 10px;
 
 }
 
 .invent-item::before {
-    position: absolute;
-    content: "";
-    width: 8px;
-    height: 8px;
-    left: 2px;
-    top: 7px;
+    position        : absolute;
+    content         : "";
+    width           : 8px;
+    height          : 8px;
+    left            : 2px;
+    top             : 7px;
     background-color: var(--basic-black);
-    transform: rotate(45deg);
+    transform       : rotate(45deg);
 }
 
 .main-footer {
     margin-top         : 60px;
-    padding: 60px 0;
+    padding            : 60px 0;
     color              : var(--basic-white);
     background-color   : var(--basic-black);
     background-image   : url(../img/pattern-dark.jpg);
@@ -850,10 +976,10 @@ input[type="radio"].visually-hidden {
 }
 
 .footer-social h2 {
-    display: block;
-    margin-top: 0;
+    display      : block;
+    margin-top   : 0;
     margin-bottom: 15px;
-    font-size: 14px;
+    font-size    : 14px;
 }
 
 .social-list {
@@ -910,7 +1036,6 @@ input[type="radio"].visually-hidden {
     background-color: var(--basic-white);
 }
 
-
 .footer-copyright {
     max-width   : 150px;
     margin      : 0;
@@ -919,13 +1044,13 @@ input[type="radio"].visually-hidden {
 }
 
 .developer {
-    display: block;
+    display      : block;
     margin-bottom: 15px;
 }
 
-.footer-copyright  .button {
+.footer-copyright .button {
     display: block;
-    margin: 0;
+    margin : 0;
 }
 
 .footer-copyright .button:hover,
@@ -935,6 +1060,7 @@ input[type="radio"].visually-hidden {
 }
 
 .modal {
+    display            : none;
     color              : var(--basic-black);
     background-color   : var(--basic-light-extra);
     background-image   : url(../img/pattern-light.jpg);
