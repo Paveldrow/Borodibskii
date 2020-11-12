@@ -10,6 +10,7 @@
     --basic-dark-pattern-bg    : #1A1A1A;
     --basic-box-shadow         : rgba(0, 0, 0, 0.1);
     --basic-box-shadow-hover   : rgba(0, 0, 0, 0.2);
+    --basic-box-shadow-modal   : rgba(0, 0, 0, 0.75);
 }
 
 body {
@@ -96,7 +97,6 @@ input[type="radio"].visually-hidden {
     justify-content: space-between;
 }
 
-
 .main-header-logo {
     order : 2;
     width : 371px;
@@ -173,11 +173,19 @@ input[type="radio"].visually-hidden {
     background-color: var(--basic-dark-extra);
 }
 
-/*
-.site-navigation-current a:not([href]) {
-    background-color: var(--basic-black);
-  }
-  */
+.site-navigation-current {
+    position: relative;
+}
+
+.site-navigation-current::after {
+    position        : absolute;
+    content         : "";
+    right           : 20px;
+    left            : 20px;
+    bottom          : 0;
+    height          : 5px;
+    background-color: var(--basic-white);
+}
 
 .button {
     display         : inline-block;
@@ -661,7 +669,6 @@ input[type="radio"].visually-hidden {
     transform       : rotate(45deg);
 }
 
-
 .custom-table {
     width: 100%;
 }
@@ -1060,20 +1067,36 @@ input[type="radio"].visually-hidden {
 }
 
 .modal {
-    display            : none;
+    position           : fixed;
+    right              : 0;
+    left               : 0;
+    margin             : auto;
     color              : var(--basic-black);
     background-color   : var(--basic-light-extra);
     background-image   : url(../img/pattern-light.jpg);
     background-position: 0 0;
     background-repeat  : repeat;
-    box-shadow         : 0 30px 50px rgba(0, 0, 0, 0.7);
+    box-shadow         : 0 30px 50px var(--basic-box-shadow-modal);
+}
+
+.modal-login {
+    top    : 120px;
+    bottom : auto;
+    width  : 300px;
+    padding: 50px 80px;
 }
 
 .modal h2 {
     margin       : 0;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
     font-size    : 30px;
-    line-height  : 40px;
+    line-height  : 42px;
+    text-align   : center;
+}
+
+.modal-description {
+    margin       : 0;
+    margin-bottom: 10px;
 }
 
 .login-form p {
@@ -1082,16 +1105,21 @@ input[type="radio"].visually-hidden {
 }
 
 .login-form .login-help {
-    margin: 15px 0;
+    display        : flex;
+    justify-content: space-between;
+    margin         : 15px 0;
 }
 
 .login-form input[type="email"],
 .login-form input[type="password"] {
+    box-sizing      : border-box;
+    width           : 100%;
     font            : inherit;
     color           : var(--basic-black);
     text-transform  : uppercase;
     background-color: var(--basic-light-extra);
     border          : 2px solid var(--basic-black);
+    padding         : 10px 16px;
 }
 
 .login-form input:focus {
@@ -1099,23 +1127,87 @@ input[type="radio"].visually-hidden {
 }
 
 .login-icon-user {
-    background-image: url(../img/icon-account-login.svg);
-
-    background-repeat: no-repeat;
+    background-image   : url(../img/icon-account-login.svg);
+    background-repeat  : no-repeat;
+    background-position: 272px center;
 }
 
 .login-icon-password {
-    background-image: url(../img/icon-account-password.svg);
+    background-image   : url(../img/icon-account-password.svg);
+    background-repeat  : no-repeat;
+    background-position: 272px center;
+}
 
-    background-repeat: no-repeat;
+.login-checkbox {
+    position   : relative;
+    margin-left: 32px;
+    cursor     : pointer;
+}
+
+.login-input-checkbox:hover+.remember,
+.login-input-checkbox:focus+.remember {
+    color: var(--basic-hover);
+}
+
+.login-input-checkbox+.remember::before {
+    position: absolute;
+    content : "";
+    width   : 16px;
+    height  : 16px;
+    left    : -32px;
+    top     : center;
+    border  : 2px solid var(--basic-black);
+}
+
+.login-input-checkbox:checked+.remember::before {
+    background-image   : url(../img/cross-checkbox.svg);
+    background-repeat  : no-repeat;
+    background-position: center;
+}
+
+.login-input-checkbox:checked+.remember {
+    color: var(--basic-hover);
 }
 
 .restore {
-    color          : var(--basic-black);
     text-decoration: underline;
+    color          : var(--basic-black);
 }
 
 .restore:hover,
 .restore:focus {
     text-decoration: none;
+}
+
+.login-form .button {
+    width: 100%;
+}
+
+.modal-close {
+    position         : absolute;
+    top              : 0;
+    right            : -34px;
+    width            : 19px;
+    height           : 19px;
+    background-color : transparent;
+    border           : none;
+    background-image : url(../img/icon-modal-close.svg);
+    background-repeat: no-repeat;
+    cursor           : pointer;
+}
+
+.modal-map {
+    box-sizing: border-box;
+    top       : 180px;
+    width     : 766px;
+    height    : 560px;
+    border    : 7px solid var(--basic-white);
+}
+
+.modal-map img {
+    max-width: 100%;
+}
+
+.page .display-none {
+    display: none;
 }

@@ -21,7 +21,7 @@
                 <li><a href="#">Информация</a></li>
                 <li><a href="#">Новости</a></li>
                 <li><a href="price.html">Прайс-лист</a></li>
-                <li><a href="catalog.html">Магазин</a></li>
+                <li class="site-navigation-current"><a href="catalog.html">Магазин</a></li>
                 <li><a href="#">Контакты</a></li>
             </ul>
             <div class="user-navigation">
@@ -210,31 +210,32 @@
         </div>
     </footer>
 
-    <section class="modal">
-        <h2>Личный кабинет</h2>
-        <p>Введите логин и пароль</p>
+    <section class="modal modal-login">
+        <h2 class="void">Личный кабинет</h2>
+        <p class="modal-description">ВВедите пожалуйста свой логин и пароль</p>
         <form class="login-form" action="https://echo.htmlacademy.ru" method="post">
             <p>
-                <label for="login-login">Логин</label>
+                <label class="visually-hidden" for="login-login">Логин</label>
                 <input class="login-icon-user" id="login-login" type="email" name="login"
                     placeholder="email@example.com">
             </p>
             <p>
-                <label for="login-password">Пароль</label>
+                <label class="visually-hidden" for="login-password">Пароль</label>
                 <input class="login-icon-password" id="login-password" type="password" name="password"
                     placeholder="********">
             </p>
-            <p>
-                <label>
-                    <input type="checkbox" name="remember">
-                    Запомните меня
-                </label>
+            <p class="login-help">
+                <label class="login-checkbox" for="remember-checkbox">
+                    <input class="visually-hidden login-input-checkbox" id="remember-checkbox" type="checkbox" name="remember" checked>
+                    <span class="remember">Запомните меня</span></label>
                 <a class="restore" href="#">Я забыл пароль!</a>
             </p>
             <button class="button" type="submit">Войти</button>
         </form>
-        <button type="button">Закрыть</button>
+        <button class="modal-close" type="button"><span class="visually-hidden">Закрыть</span></button>
     </section>
+
+   
 
 </body>
 
